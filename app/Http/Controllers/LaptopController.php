@@ -17,19 +17,29 @@ class LaptopController extends Controller
 
     public function create()
     {
-        //
+      return view('products.create');
     }
 
 
     public function store(Request $request)
     {
-        //
+      $dati = $request->all();
+      $nuovo_laptop = new Laptop();
+      $nuovo_laptop->marca = $dati['marca'];
+      $nuovo_laptop->modello = $dati['modello'];
+      $nuovo_laptop->cpu = $dati['cpu'];
+      $nuovo_laptop->prezzo = $dati['prezzo'];
+      $nuovo_laptop->save();
+
+      return redirect()->route('laptops.index');
     }
 
 
-    public function show(Laptop $laptop)
+    public function show($laptop_id)
     {
-        //
+      $laptop = Laptop::find($laptop_id);
+
+      return view('laptops.show', compact('laptop'));
     }
 
 

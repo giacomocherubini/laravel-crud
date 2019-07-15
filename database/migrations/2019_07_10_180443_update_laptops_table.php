@@ -10,7 +10,7 @@ class UpdateLaptopsTable extends Migration
     public function up()
     {
         Schema::table('laptops', function (Blueprint $table) {
-            $table->string('Modello')->after('Marca');
+            $table->string('modello')->after('marca');
         });
     }
 
@@ -18,7 +18,7 @@ class UpdateLaptopsTable extends Migration
     public function down()
     {
         Schema::table('laptops', function (Blueprint $table) {
-            $table->dropColumn('Modello');
+            $table->dropColumn('modello');
         });
     }
 }

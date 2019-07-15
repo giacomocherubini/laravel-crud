@@ -15,8 +15,8 @@ class CreateLaptopsTable extends Migration
     {
         Schema::create('laptops', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Marca');
-            $table->string('Cpu');
+            $table->string('marca');
+            $table->string('cpu');
             $table->float('prezzo');
             $table->timestamps();
         });
