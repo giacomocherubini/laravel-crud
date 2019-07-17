@@ -39,7 +39,7 @@ class LaptopController extends Controller
     {
       $laptop = Laptop::find($laptop_id);
 
-      return view('laptops.show', compact('laptop'));
+      return view('products.show', compact('laptop'));
     }
 
 

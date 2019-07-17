@@ -14,8 +14,8 @@
       <th>Marca</th>
       <th>Modello</th>
       <th>Cpu</th>
-      <th>Azioni</th>
       <th class="text-right">Prezzo</th>
+      <th class="text-right">Azioni</th>
     </tr>
   </thead>
   <tbody>
@@ -28,7 +28,7 @@
         <td>{{ $laptop->cpu }}</td>
         <td class="text-right">{{ $laptop->prezzo }}</td>
         <td>
-          <a href="{{ route('laptops.show', $laptop->id) }}" class="btn btn-info">Visualizza</a>
+          <a href="{{ route('laptops.show', $laptop->id) }}" class="btn btn-info float-right">Visualizza</a>
         </td>
       </tr>
       @empty
